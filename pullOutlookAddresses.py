@@ -11,6 +11,8 @@ importList='C:\\directory\\to\\outlookList.txt'
 file=open(importList)
 data=file.read()
 print('Opened: ' + importList + '.')
+file.close()
+print('Closed: ' + importList + '.')
 
 #If you need a list of the data
 #dataList=list(data.split(';'))
@@ -25,6 +27,6 @@ emailList=open(outputFile,'a')
 dataEmailAddresses=re.findall(r'[a-zA-Z0-9\.\-+_]+@[a-zA-Z0-9\.\-+_]+\.[a-z]+', data)
 for address in dataEmailAddresses:
     emailList.write(address + '\n')
+    print(address)
 emailList.close()
-file.close()
 print('Saved: ' + outputFile + '.')
