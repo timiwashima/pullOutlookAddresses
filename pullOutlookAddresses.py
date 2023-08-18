@@ -26,4 +26,5 @@ dataEmailAddresses=re.findall(r'[a-zA-Z0-9\.\-+_]+@[a-zA-Z0-9\.\-+_]+\.[a-z]+', 
 for address in dataEmailAddresses:
     emailList.write(address + '\n')
 emailList.close()
+file.close()
 print('Saved: ' + outputFile + '.')
